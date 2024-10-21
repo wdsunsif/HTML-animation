@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square animation</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: red;
+        animation: moveSquare 8s linear infinite;
+      }
+
+      @keyframes moveSquare {
+        0% {
+          top: 0;
+          left: 0;
+          background-color: red;
+        }
+        25% {
+          top: 0;
+          left: calc(100vw - 100px);
+          background-color: green;
+        }
+        50% {
+          top: calc(100vh - 100px);
+          left: calc(100vw - 100px);
+          background-color: blue;
+        }
+        75% {
+          top: calc(100vh - 100px);
+          left: 0;
+          background-color: yellow;
+        }
+        100% {
+          top: 0;
+          left: 0;
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square"></div>
+  </body>
+</html>
